@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerUser } from '../actions/auth';
 
-const RegisterForm = () => {
+const RegisterForm = ({isHome = false}) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -28,7 +28,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="container auth-form-container">
+    <div className={isHome ? "container auth-form-container w-50" : "container auth-form-container"}>
       <form onSubmit={e => onSubmit(e)}>
         <h2 className='text-center'>Registration</h2>
         <div className="form-group">

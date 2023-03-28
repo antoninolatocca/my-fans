@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #D4CFD9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 body {
   background-color: #050507;
   color: #D4CFD9;
@@ -13,6 +19,20 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-column {
+  width: 50%;
+}
+
+.right-column {
+  width: 50%;
 }
 
 /* Header bar */
@@ -97,10 +117,18 @@ button {
 
 .form-gruop {
   width: 100%;
-
 }
 
 label, input, textarea {
   display: blocK;
   width: 100%;
+}
+
+.home {
+  margin: 2rem;
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;;
 }

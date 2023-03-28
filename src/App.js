@@ -25,21 +25,19 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <Router>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/login" element={<LoginForm />} />
-            <Route path="/register" element={<RegisterForm />} />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<RegisterForm />} />
 {/**
-            <PrivateRoute path="/profile" element={<PerformerProfile />} />
-            <PrivateRoute path="/performers/:id/posts" element={<UserPostList />} />
-            <PrivateRoute path="/performers/:id" element={<PerformerProfile />} />
-            <PrivateRoute path="/performers" element={<Performers />} />
-            <PrivateRoute path="/posts/new" element={<PostForm />} />
-  **/}
-            <Route path='*' element={<Home />} />
-          </Routes>
-        </Router>
+          <PrivateRoute path="/profile" element={<PerformerProfile />} />
+          <PrivateRoute path="/performers/:id/posts" element={<UserPostList />} />
+          <PrivateRoute path="/performers/:id" element={<PerformerProfile />} />
+          <PrivateRoute path="/performers" element={<Performers />} />
+          <PrivateRoute path="/posts/new" element={<PostForm />} />
+**/}
+          <Route path='*' element={<Home />} />
+        </Routes>
       </main>
       <Footer />
     </div>
