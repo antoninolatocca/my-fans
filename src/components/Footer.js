@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-      {/* Inserisci qui il tuo codice HTML per il footer */}
+      <h3>||| Footer bar |||</h3>
     </footer>
   );
 }

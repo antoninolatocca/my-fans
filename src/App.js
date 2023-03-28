@@ -21,26 +21,27 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <main>
+    <div className="App">
+      <Header />
+      <main>
+        <Router>
           <Routes>
-            <Route exact path="/" component={Home} />
-            <Route path="/login" component={LoginForm} />
-            <Route path="/register" component={RegisterForm} />
-  {/** 
-            <PrivateRoute path="/profile" component={PerformerProfile} />
-            <PrivateRoute path="/performers/:id/posts" component={UserPostList} />
-            <PrivateRoute path="/performers/:id" component={PerformerProfile} />
-            <PrivateRoute path="/performers" component={Performers} />
-            <PrivateRoute path="/posts/new" component={PostForm} />
+            <Route exact path="/" element={<Home />} />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/register" element={<RegisterForm />} />
+{/**
+            <PrivateRoute path="/profile" element={<PerformerProfile />} />
+            <PrivateRoute path="/performers/:id/posts" element={<UserPostList />} />
+            <PrivateRoute path="/performers/:id" element={<PerformerProfile />} />
+            <PrivateRoute path="/performers" element={<Performers />} />
+            <PrivateRoute path="/posts/new" element={<PostForm />} />
   **/}
+            <Route path='*' element={<Home />} />
           </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+        </Router>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
