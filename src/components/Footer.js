@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-      <h3>||| Footer bar |||</h3>
+      <p className='text-center'>©Antonino Latocca & ChatGPT - 2023</p>
     </footer>
   );
 }

@@ -28,8 +28,9 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container auth-form-container">
       <form onSubmit={e => onSubmit(e)}>
+        <h2 className='text-center'>Registration</h2>
         <div className="form-group">
           <label>Email</label>
           <input
@@ -86,7 +87,7 @@ const RegisterForm = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="dark-button">
           Register
         </button>
       </form>
