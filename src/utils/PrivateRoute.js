@@ -1,27 +1,11 @@
-import React from "react";
-import { Route, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { Route, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  const navigate = useNavigate();
-  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
+const PrivateRoute = ({ element: Component, ...rest }) => {
+  const isAuth = useSelector(state => state.auth.isAuthenticated);
   return (
-    <Route
-      {...rest}
-      render={(props) =>
-        isAuthenticated ? (
-          <Component {...props} />
-        ) : (
-          <Route
-            {...rest}
-            render={() => {
-              navigate("/login");
-              return null;
-            }}
-          />
-        )
-      }
-    />
+    <Route {...rest} render={props => isAuth ? <Component {...props} /> : <Navigate to='/login' />} />
   );
 };
 

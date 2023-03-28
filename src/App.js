@@ -1,6 +1,6 @@
 import React from 'react';
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -29,13 +29,11 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
-{/**
-          <PrivateRoute path="/profile" element={<PerformerProfile />} />
-          <PrivateRoute path="/performers/:id/posts" element={<UserPostList />} />
-          <PrivateRoute path="/performers/:id" element={<PerformerProfile />} />
-          <PrivateRoute path="/performers" element={<Performers />} />
-          <PrivateRoute path="/posts/new" element={<PostForm />} />
-**/}
+          <Route path="/profile" element={<PrivateRoute element={<PerformerProfile />} />} />
+          <Route path="/performers/:id/posts" element={<PrivateRoute element={<UserPostList />} />} />
+          <Route path="/performers/:id" element={<PrivateRoute element={<PerformerProfile />} />} />
+          <Route path="/performers" element={<PrivateRoute element={<Performers />} />} />
+          <Route path="/posts/new" element={<PrivateRoute element={<PostForm />} />} />
           <Route path='*' element={<Home />} />
         </Routes>
       </main>
