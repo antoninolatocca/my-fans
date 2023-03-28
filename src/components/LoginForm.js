@@ -4,13 +4,13 @@ import { login } from "../actions";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(login(username, password));
-    setUsername("");
+    dispatch(login(email, password));
+    setEmail("");
     setPassword("");
   };
 
@@ -19,21 +19,26 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit}>
         <h2 className="text-center">Login</h2>
         <div>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="email">Email</label>
           <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
+            type='email'
+            placeholder='Email Address'
+            name='email'
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            required
           />
         </div>
         <div>
           <label htmlFor="password">Password</label>
           <input
-            type="password"
-            id="password"
+            type='password'
+            placeholder='Password'
+            name='password'
             value={password}
+            minLength='6'
             onChange={(event) => setPassword(event.target.value)}
+            required
           />
         </div>
         <button type="submit" className="dark-button">

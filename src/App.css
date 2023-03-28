@@ -62,10 +62,21 @@ input, textarea {
   color: #D4CFD9;
   border-width: 0px;
   border-radius: 4px;
-  font-size: 120%;
-  margin: 0.5rem 0;
-  padding: 0.25rem;
+  font-size: 100%;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.5rem;
   color: #ccc;
+  display: blocK;
+  width: 100%;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+label {
+  font-size: 80%;
+  color: #999;
+  margin-top: 1rem;
+  font-weight: 300;
 }
 
 /* Bottoni */
@@ -117,11 +128,7 @@ button {
 
 .form-gruop {
   width: 100%;
-}
-
-label, input, textarea {
-  display: blocK;
-  width: 100%;
+  margin: 1rem auto;
 }
 
 .home {
