@@ -7,6 +7,7 @@ function PerformerProfileVideoList() {
   return (
     <div>
       <h2>Video</h2>
+      <button className="dark-button">Create Video</button>
       {videos.map((video) => (
         <div key={video.id}>
           <div>

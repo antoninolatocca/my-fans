@@ -31,7 +31,7 @@ function PerformerProfile() {
 
   return (
     <div className="performer-profile">
-      <PerformerProfileHeader performerId={performerId} />
+      <PerformerProfileHeader />
       <PerformerProfileTabs />
       <div className="performer-subpage-container">
         {activePanel}

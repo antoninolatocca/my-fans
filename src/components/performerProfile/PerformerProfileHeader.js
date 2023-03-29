@@ -1,9 +1,15 @@
 import React from 'react';
+import {useParams} from 'react-router-dom';
 
-const PerformerProfileHeader = ({ performer }) => {
+const PerformerProfileHeader = () => {
+
+  const { id } = useParams();
+  const performerId = id;
+
   return (
-    <div>
-      {/* qui inseriamo il codice per visualizzare il nome, la descrizione, l'immagine del profilo, il numero di sostenitori, eccetera */}
+    <div className='performer-page-header'>
+      <div className='performer-page-header-cover'></div>
+      <div className='performer-page-header-avatar'></div>
     </div>
   );
 };

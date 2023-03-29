@@ -8,6 +8,7 @@ const PerformerProfileAlbumList = () => {
   return (
     <div className="album-list">
       <h2>Albums</h2>
+      <button className="dark-button">Create Album</button>
       <div className="album-grid">
         {albums.map((album) => (
           <div key={album.id} className="album-card">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PostCard from './PostCard';
 
@@ -12,8 +11,8 @@ const PerformerProfilePostList = () => {
     <div className="performer-profile-post-list">
       <div className="performer-profile-post-list-header">
         <h2>Posts</h2>
-        <Link to="/posts/new" className="button-light">Create Post</Link>
       </div>
+      <button className="dark-button">Create Post</button>
       {performerPosts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}

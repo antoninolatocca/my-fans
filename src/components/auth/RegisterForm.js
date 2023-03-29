@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { registerUser } from '../actions/auth';
+import { registerUser } from '../../actions/auth';
 import { Link } from 'react-router-dom';
 
 const RegisterForm = ({isHome = false}) => {

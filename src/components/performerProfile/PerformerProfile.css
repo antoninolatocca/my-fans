@@ -3,7 +3,6 @@
     width: 100%;
     margin: 2rem auto;
     text-align: center;
-
 }
 
 .tabs a {
@@ -20,4 +19,30 @@
     padding: 2rem;
     width: 80%;
     margin: 0 auto
+}
+
+
+/** header **/
+.performer-page-header {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.performer-page-header .performer-page-header-cover {
+    width: 100%;
+    height: 85%;
+    background-color: #555;
+}
+
+.performer-page-header .performer-page-header-avatar {
+    aspect-ratio: 1;
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid #EEE;
+    background-color: #555;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
 }
