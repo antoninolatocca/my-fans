@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function PerformerProfileVideoList() {
 
@@ -26,15 +25,5 @@ function PerformerProfileVideoList() {
     </div>
   );
 }
-
-PerformerProfileVideoList.propTypes = {
-  videos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
 
 export default PerformerProfileVideoList;
