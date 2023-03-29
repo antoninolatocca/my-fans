@@ -15,3 +15,9 @@
     border-bottom: 1px solid #EEE;
     font-weight: 600;
 }
+
+.performer-subpage-container {
+    padding: 2rem;
+    width: 80%;
+    margin: 0 auto
+}

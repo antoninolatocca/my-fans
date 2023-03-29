@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import PerformerProfileHeader from './PerformerProfileHeader';
 import PerformerProfileTabs from './PerformerProfileTabs';
 import PerformerProfileAbout from './PerformerProfileAbout';
@@ -11,17 +11,31 @@ import './PerformerProfile.css';
 function PerformerProfile() {
   const { id } = useParams();
   const performerId = id;
+  const location = useLocation();
+
+  var activePanel = <></>;
+
+  switch(location.pathname) {
+    case `/performers/${performerId}/posts`:
+      activePanel = <PerformerProfilePostList />;
+      break;
+    case `/performers/${performerId}/albums`:
+      activePanel = <PerformerProfileAlbumList />;
+      break;
+    case `/performers/${performerId}/videos`:
+      activePanel = <PerformerProfileVideoList />;
+      break;
+    default:
+      activePanel = <PerformerProfileAbout />;
+  }
 
   return (
     <div className="performer-profile">
       <PerformerProfileHeader performerId={performerId} />
       <PerformerProfileTabs />
-      <Routes>
-        <Route exact path="/performer/:id/*" element={<PerformerProfileAbout />} />
-        <Route exact path="/performer/:id/posts" element={<PerformerProfilePostList />} />
-        <Route exact path="/performer/:id/albums" element={<PerformerProfileAlbumList />} />
-        <Route exact path="/performer/:id/videos" element={<PerformerProfileVideoList />} />
-      </Routes>
+      <div className="performer-subpage-container">
+        {activePanel}
+      </div>
     </div>
   );
 }

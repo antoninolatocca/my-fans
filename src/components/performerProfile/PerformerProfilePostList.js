@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import PostCard from './PostCard';
 
 const PerformerProfilePostList = () => {
-  const posts = useSelector((state) => state.posts);
+  const posts = useSelector((state) => state.post.posts);
   const performer = useSelector((state) => state.performer);
   const performerPosts = posts.filter((post) => post.performerId === performer.id);
 
