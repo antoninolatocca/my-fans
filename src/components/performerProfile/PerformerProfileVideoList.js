@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function PerformerProfileVideoList({ videos }) {
+function PerformerProfileVideoList() {
+
+  const videos = [];
+
   return (
     <div>
       <h2>Video</h2>

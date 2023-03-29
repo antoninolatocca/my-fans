@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PerformerProfileAlbumList = ({ albums }) => {
+const PerformerProfileAlbumList = () => {
+
+  const albums = [];
+
   return (
     <div className="album-list">
       <h2>Albums</h2>
