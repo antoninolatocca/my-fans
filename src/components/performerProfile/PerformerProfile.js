@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useSearchParams } from 'react-router-dom';
+import { Routes, Route, useParams } from 'react-router-dom';
 import PerformerProfileHeader from './PerformerProfileHeader';
 import PerformerProfileTabs from './PerformerProfileTabs';
 import PerformerProfileAbout from './PerformerProfileAbout';
@@ -9,18 +9,18 @@ import PerformerProfileVideoList from './PerformerProfileVideoList';
 import './PerformerProfile.css';
 
 function PerformerProfile() {
-  const [searchParams] = useSearchParams();
-  const performerId = searchParams.get('id');
+  const { id } = useParams();
+  const performerId = id;
 
   return (
     <div className="performer-profile">
       <PerformerProfileHeader performerId={performerId} />
-      <PerformerProfileTabs performerId={performerId} />
+      <PerformerProfileTabs />
       <Routes>
-        <Route exact path="/performer/:id/about" component={PerformerProfileAbout} />
-        <Route exact path="/performer/:id/posts" component={PerformerProfilePostList} />
-        <Route exact path="/performer/:id/albums" component={PerformerProfileAlbumList} />
-        <Route exact path="/performer/:id/videos" component={PerformerProfileVideoList} />
+        <Route exact path="/performer/:id/*" element={<PerformerProfileAbout />} />
+        <Route exact path="/performer/:id/posts" element={<PerformerProfilePostList />} />
+        <Route exact path="/performer/:id/albums" element={<PerformerProfileAlbumList />} />
+        <Route exact path="/performer/:id/videos" element={<PerformerProfileVideoList />} />
       </Routes>
     </div>
   );

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 
-const PerformerProfileTabs = ({ performerId }) => {
+const PerformerProfileTabs = () => {
   const location = useLocation();
+  const { id } = useParams();
+  const performerId = id;
 
   return (
     <div className="tabs">
