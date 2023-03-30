@@ -29,3 +29,14 @@
     bottom: 0;
     transform: translate(-50%);
 }
+
+.performer-page-header .performer-page-header-buttons {
+    position: absolute;
+    right: 2rem;
+    bottom: 0;
+}
+
+.performer-page-subheader {
+    width: 80%;
+    margin: 1rem auto;
+}

@@ -96,7 +96,9 @@ const RegisterForm = ({isHome = false}) => {
           <input type='checkbox' required /> I accept the Terms and Conditions
           and Privacy Policy
         </div>
-        <button type='submit' className='dark-button' value='Register'>Register</button>
+        <div className="text-center">
+          <button type='submit' className='dark-button' value='Register'>Register</button>
+        </div>
       </form>
       <div className='text-center'>
         <p>

@@ -41,9 +41,11 @@ const LoginForm = () => {
             required
           />
         </div>
-        <button type="submit" className="dark-button">
-          Accedi
-        </button>
+        <div className="text-center">
+          <button type="submit" className="dark-button">
+            Accedi
+          </button>
+        </div>
       </form>
     </div>
   );
