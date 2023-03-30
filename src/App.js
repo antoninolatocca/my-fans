@@ -12,8 +12,12 @@ import PerformerProfileAbout from './components/performerProfile/PerformerProfil
 import PerformerProfilePosts from './components/performerProfile/PerformerProfilePostList';
 import PerformerProfileAlbums from './components/performerProfile/PerformerProfileAlbumList';
 import PerformerProfileVideos from './components/performerProfile/PerformerProfileVideoList';
+import AccountSettings from './components/accountSettings/AccountSettings';
+import AccountSettingsProfile from './components/accountSettings/AccountSettingsProfile';
+import AccountSettingsWallet from './components/accountSettings/AccountSettingsWallet';
 import PrivateRoute from './utils/PrivateRoute';
 import { checkLoggedIn } from './actions/auth';
+import AccountSettingsMembership from './components/accountSettings/AccountSettingsMembership';
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +40,12 @@ function App() {
             <Route path="posts" element={<PerformerProfilePosts />} />
             <Route path="albums" element={<PerformerProfileAlbums />} />
             <Route path="videos" element={<PerformerProfileVideos />} />
+          </Route>
+
+          <Route path="/settings/" element={<AccountSettings />}>
+            <Route path="*" element={<AccountSettingsProfile />} />
+            <Route path="wallet" element={<AccountSettingsWallet />} />
+            <Route path="membership" element={<AccountSettingsMembership />} />
           </Route>
 
           {/**

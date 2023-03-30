@@ -139,3 +139,22 @@ button {
 .w-50 {
   width: 50%;;
 }
+
+
+
+.tabs {
+  display: block;
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.tabs a {
+  padding: 1rem;
+  border-bottom: 1px solid #2A0E3F;
+}
+
+.tabs a.active {
+  border-bottom: 1px solid #EEE;
+  font-weight: 600;
+}
