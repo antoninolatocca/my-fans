@@ -40,3 +40,19 @@
     width: 80%;
     margin: 1rem auto;
 }
+
+.performer-info-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* due colonne con rapporto 1:2 */
+    grid-gap: 2rem; /* spazio di 2 rem tra le colonne */
+}
+  
+/**
+.performer-info-details {
+}
+**/
+  
+.performer-info-presentation {
+    white-space: pre-wrap;
+    text-align: justify;
+}

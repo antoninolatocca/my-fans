@@ -72,12 +72,26 @@ input, textarea {
   font-weight: 400;
 }
 
+input[type="checkbox"] {
+  aspect-ratio: 1;
+  height: 32px;
+  width: 32px;
+  accent-color: transparent;
+  float: left;
+  margin-right: 0.5rem;
+}
+
 label {
   font-size: 80%;
   color: #999;
   margin-top: 1rem;
   font-weight: 300;
 }
+
+label.checkbox-description {
+  font-size: 90%;
+}
+
 
 /* Bottoni */
 
@@ -104,6 +118,10 @@ button {
   user-select: none;
   letter-spacing: .013rem;
   line-height: 1.813rem;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
 }
 
 .dark-button {

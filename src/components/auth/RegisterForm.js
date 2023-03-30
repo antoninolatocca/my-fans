@@ -92,9 +92,11 @@ const RegisterForm = ({isHome = false}) => {
             autoComplete='off'
           />
         </div>
-        <div className='form-group'>
-          <input type='checkbox' required /> I accept the Terms and Conditions
-          and Privacy Policy
+        <div className="form-group">
+          <label className='checkbox-description'>
+            <input type='checkbox' required /> I accept the Terms and Conditions
+            and Privacy Policy
+          </label>
         </div>
         <div className="text-center">
           <button type='submit' className='dark-button' value='Register'>Register</button>
