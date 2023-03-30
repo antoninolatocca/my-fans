@@ -76,6 +76,7 @@ const RegisterForm = ({isHome = false}) => {
             onChange={(e) => onChange(e)}
             minLength='6'
             required
+            autocomplete="new-password"
           />
         </div>
         <div className='form-group'>
@@ -88,6 +89,7 @@ const RegisterForm = ({isHome = false}) => {
             onChange={(e) => onChange(e)}
             minLength='6'
             required
+            autoComplete='off'
           />
         </div>
         <div className='form-group'>

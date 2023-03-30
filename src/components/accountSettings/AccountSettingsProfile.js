@@ -1,9 +1,13 @@
 import React from 'react';
+import ProfileForm from './ProfileForm';
 
 const AccountSettingsProfile = () => {
 
   return (
-    <h2>Settings Profile</h2>
+    <div>
+      <h2>Settings Profile</h2>
+      <ProfileForm />
+    </div>
   );
 };
 
