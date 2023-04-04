@@ -41,6 +41,13 @@ const LoginForm = () => {
             required
           />
         </div>
+        {/**
+        <div className="form-group">
+          <label className='checkbox-description'>
+            <input type='checkbox' /> Keep me logged-in
+          </label>
+        </div>
+        **/}
         <div className="text-center">
           <button type="submit" className="dark-button">
             Accedi

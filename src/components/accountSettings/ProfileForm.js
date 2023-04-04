@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { updateAccount } from '../../actions/account';
+import CountryAutocomplete from './CountryAutocomplete';
 
 const ProfileForm = () => {
 
@@ -60,6 +61,10 @@ const ProfileForm = () => {
             required
             autoComplete='off'
           />
+        </div>
+        <div className='form-group'>
+          <label htmlFor='country'>Country</label>
+          <CountryAutocomplete />
         </div>
         <button type='submit' className='dark-button' value='Register'>Update</button>
       </form>

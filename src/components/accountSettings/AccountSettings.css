@@ -1,0 +1,12 @@
+.account-balance-container {
+    background-color: #2A0E3F;
+    border-radius: 10px;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1.5rem 2rem;
+}
+
+.balance-counter {
+    font-size: 200%;
+    margin-bottom: 0.75rem;
+}
